@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #F2F2F2;
+  text-align: center;
+}
+
+body {
+  background: url(./img/bg.jpg) center/cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: clamp(1rem, 5.5vw, 2.3rem);
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 15px;
+
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: rgba(4, 16, 38, 0.3);
+  backdrop-filter: blur(6px) brightness(0.3);
+  box-shadow: 7px 7px 5px 1px rgba(0, 0, 0, 0.4);
+  width: 95%;
+  height: 95%;
+  max-width: 650px;
+  max-height: 450px;
+  border-radius: 5px;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 80%;
+  padding-bottom: 2%;
+}
+
+.range-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  width: 70%;
+  padding: 10px 0;
+
+}
+
+input[type=text] {
+  all: unset;
+}
+
+#display-password-length {
+  margin: 5px 0;
+}
+
+#password-length {
+  width: 80%;
+  appearance: none;
+  height: 2px;
+  opacity: 1;
+  transition: 0.2s;
+  background: #ffffff;
+  margin: 20px 0 15px 0;
+}
+
+#password-length::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 28px;
+  background: #ffffff;
+  border-radius: 10px;
+  transform: scale(0.95);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+#password-length::-webkit-slider-thumb:hover {
+  transform: scale(1);
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  height: 55px;
+  width: 55px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  transform: scale(1);
+  cursor: pointer;
+  margin: 0 4px;
+  transition: 100ms ease-in-out;
+}
+
+
+
+input[type=checkbox]:checked + label {
+  transform: scale(1.1);
+  box-shadow: inset 0 0 6px 1px rgba(255, 255, 255, 0.4), 0 0 8px 1px rgba(255, 255, 255, 0.7);
+  opacity: 1;
+}
+
+label:hover {
+  opacity: 0.8 !important;
+}
+
+i {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+i:hover {
+  opacity: 0.85;
+}
+
+i:active {
+  transform: scale(0.9);
+}
+
+i:hover + .copy {
+  opacity: 1;
+}
+
+
+.generateButton {
+  appearance: none;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  height: 45px;
+  width: 120px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 1;
+  transition: 100ms ease-in-out;
+}
+.generateButton:hover {
+  opacity: 0.85;
+}
+.generateButton:active {
+  transform: scale(0.95);
+}
+
+.password-output-container {
+  width: 99%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#password-output {
+font-size: clamp(0.45rem, 3.5vw, 1.3rem);
+margin-bottom: 5px;
+width: 100%;
+}
+
+ /* # Glitch Effect # */
+
+ h1{
+  animation: glitch 7s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes glitch{
+  1%, 1.2%, 20%, 20.2%, 30%, 30.2% {
+    transform: translate(0,0) skew(0); 
+  }
+  1.1%{
+    transform: translate(-2px,0) skew(-8deg);
+  }
+  20.1%{
+    transform: translate(0px,0) skew(15deg); 
+  }
+  30.1%{
+    transform: translate(2px,0) skew(10deg); 
+  }
+} 
+
+h1:before,
+h1:after{
+  content: attr(title);
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: 0;
+}
+h1:before{
+  animation: glitchTop 5s ease-in-out infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  color: rgba(204, 15, 56, 0.7);
+}
+@keyframes glitchTop{
+  3%, 3.2%, 10%, 10.2%, 33%, 33.2%, 80%, 80.2% {
+    transform: translate(0,0) skew(0); 
+  }
+  3.1%{
+    transform: translate(13px,-2px) skew(13deg); 
+  }
+  10.1%{
+    transform: translate(4px,-6px) skew(20deg); 
+  }
+  33.1%{
+    transform: translate(-20px,-1px) skew(5deg); 
+  }
+  80.1%{
+    transform: translate(0, 5px) skew(-30deg); 
+  }
+}
+h1:after{
+  animation: glitchBotom 7s ease-in-out infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  color: rgba(15, 251, 247, 0.7);
+}
+@keyframes glitchBotom{
+  6%, 6.2%, 15%, 15.2%, 30%, 30.2%, 40%, 40.2% {
+    transform: translate(0,0) skew(0); 
+  }
+  6.1%{
+    transform: translate(8px,-2px) skew(13deg); 
+  }
+  15.1%{
+    transform: translate(-2px,1px) skew(-5deg); 
+  }
+  30.1%{
+    transform: translate(-22px,0) skew(26deg); 
+  }
+  40.1%{
+    transform: translate(3px, 8px) skew(10deg); 
+  }
+}
+
+  /* # Responsive # */
+
+@media screen and (max-width: 520px) {
+  .app {
+    max-width: none;
+    max-height: none;
+    padding-top: 3%;
+  }
+  .range-container, .checkbox-container {
+    width: 95%; 
+  }
+  .range-container {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 352px) {
+  .range-container {
+    font-size: 1rem;
+  }
+}
+
