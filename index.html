@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Password Generator</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -31,17 +31,18 @@
         <input type="checkbox" id="uppercase">
         <label for="uppercase">A-Z</label>
 
-        <input type="checkbox" id="number">
-        <label for="number">0-9</label>
+        <input type="checkbox" id="numbers">
+        <label for="numbers">0-9</label>
 
         <input type="checkbox" id="symbols">
         <label for="symbols">!-%</label>
       </div>
 
       <div class="password-output-container">
-        <input type="text" id="password-output" value="555555555555555555555555555555555555555O" maxlength="40"
-          readonly>
-        <i class="far fa-copy"></i>
+        <input type="text" id="password-output" value="" maxlength="40" readonly>
+        <i class="far fa-copy" id="copy">
+          <span class="copied">Copied to clipboard</span>
+        </i>
       </div>
       <button class="generateButton">Generate</button>
 
