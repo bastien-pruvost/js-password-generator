@@ -37,7 +37,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background: rgba(4, 16, 38, 0.3);
+  background: rgba(4, 15, 37, 0.302);
   -webkit-backdrop-filter: blur(6px) brightness(0.3);
           backdrop-filter: blur(6px) brightness(0.3);
   box-shadow: 7px 7px 5px 1px rgba(0, 0, 0, 0.4);
@@ -55,7 +55,7 @@ h1 {
   align-items: center;
   width: 90%;
   height: 80%;
-  padding-bottom: 2%;
+  padding-bottom: 1%;
 }
 
 .range-container {
@@ -192,21 +192,28 @@ label:hover {
 }
 
 i {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   cursor: pointer;
   position: relative;
   overflow: visible;
   margin-top: 4px;
+  transition: 150ms ease-in-out 150ms;
+  transform: scale(1) translateY(65%);
+  opacity: 0;
 }
 
 i:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 i:active {
-  transform: scale(0.9);
+  transform: scale(0.9) translateY(0%);
 }
-
+.copyInfo {
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
 
 .copied {
   display: flex;
@@ -215,9 +222,9 @@ i:active {
   position: absolute;
   width: 35vw;
   max-width: 175px;
-  left: 25px;
+  left: 68px;
   top: 50%;
-  transform: translateY(10%);
+  transform: translateY(20%);
   -webkit-clip-path: polygon(0 50%, 5% 40%, 5% 5%, 6% 0, 99% 0, 100% 5%, 100% 95%, 99% 100%, 6% 100%, 5% 95%, 5% 60%);
           clip-path: polygon(0 50%, 5% 40%, 5% 5%, 6% 0, 99% 0, 100% 5%, 100% 95%, 99% 100%, 6% 100%, 5% 95%, 5% 60%);
   background: #ffffff;
@@ -231,7 +238,7 @@ i:active {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  transition: opacity 200ms linear, transform 200ms cubic-bezier(.37,-0.44,.69,1.76);
+  transition: opacity 150ms linear, transform 200ms cubic-bezier(.37,-0.44,.69,1.76);
 }
 
 .generateButton {
@@ -269,9 +276,15 @@ i:active {
 }
 
 #password-output {
-font-size: clamp(0.45rem, 3.5vw, 1.3rem);
-margin-bottom: 5px;
+font-size: clamp(0.6rem, 3.5vw, 1.45rem);
+margin-bottom: 10px;
 width: 100%;
+color: #7A6E01;
+opacity: 0;
+transform: translateY(65%);
+transition: 150ms ease-in-out;
+font-family: 'Courier New', Courier, monospace;
+font-weight: 600;
 }
 
  /* # Glitch Effect on h1 # */

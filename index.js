@@ -56,16 +56,22 @@ function generatePassword() {
   passwordOutput.value = password;
 };
 
-// Generate the password when generate button is clicked
+// Generate the password and show copy button when generate button is clicked
 generateButton.addEventListener("click", () => {
   generatePassword();
+  copyButton.style.opacity = "1";
+  copyButton.style.transform = "scale(1) translateY(0%)";
+  passwordOutput.style.opacity = "1";
+  passwordOutput.style.transform = "translateY(0%)";
+
+
 });
 
 // Copy to clipboard when copy button is clicked
 copyButton.addEventListener("click", () => {
   copyToClipboard();
   copiedNotif.style.opacity = "1";
-  copiedNotif.style.transform = "translateY(-50%)";
+  copiedNotif.style.transform = "translateY(-40%)";
   setTimeout(() => {
     copiedNotif.style.opacity = "0";
     copiedNotif.style.transform = "translateY(20%)";
