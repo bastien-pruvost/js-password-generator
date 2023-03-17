@@ -1,18 +1,89 @@
-# JS - Password Generator
-<a href="https://password-generator.pruvostbastien.fr/" target="_blank"><img src="https://img.shields.io/badge/ctrl_%2B_click_here_to_see_the_website-324050?style=for-the-badge&logo=github&logoColor=white" /></a>
+<!-- prettier-ignore-start -->
 
-## A password generator in JavaScript
+<!-- Rename all occurences with Cmd + D :
 
-Another practice project where I created a random password generator.  
-We select the number of characters and the types of characters that we want in the password, then we click on "generate" and the password is displayed.  
-There is a feature to copy the password to the clipboard.  
-A pretty simple project, but it's just for practice.  
+Password Generator
+js-password-generator
+password-generator.pruvostbastien.fr
+https://password-generator.pruvostbastien.fr
 
----
+ -->
 
-## Un generateur de mot de passe en JavaScript
+# Password Generator
 
-Un autre projet d'entrainement ou j'ai créé un generateur de mot de passe aléatoire.  
-On selectionne le nombre de caractères et les types de caractères que l'on veut dans le mot de passe, ensuite on clique sur "generer" et le mot de passe s'affiche.   
-Il y a ensuite une fonctionnalité pour copier le mot de passe dans le presse-papier.  
-Rien d'extraordinaire dans ce projet mais c'est juste pour s'entrainer.  
+A password generator in JavaScript
+
+[password-generator.pruvostbastien.fr](https://password-generator.pruvostbastien.fr)
+
+
+## About the project
+
+Another practice project where I created a random password generator.
+
+We select the number of characters and the types of characters that we want in the password, then we click on "generate" and the password is displayed.
+
+There is a feature to copy the password to the clipboard.
+
+
+## Features
+
+- Select number of characters
+- Select type of characters (Uppercase, Number, Special characters)
+- Random password generation
+- Copy generated password to clipboard
+
+
+## Run locally
+
+1. Clone the project:
+
+```bash
+  git clone https://github.com/bastien-pruvost/js-password-generator.git
+```
+
+2. Go to the project directory:
+
+```bash
+  cd js-password-generator
+```
+
+3. Run `index.html` file with your browser
+
+
+## Suggestions
+
+If you have any suggestion, feel free to [create an issue](https://github.com/bastien-pruvost/js-password-generator/issues) with the tag "enhancement"
+
+
+## Report bug / Support
+
+To report a bug or get help, please [create an issue](https://github.com/bastien-pruvost/js-password-generator/issues).
+
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request.
+
+1. [Fork the project](https://github.com/bastien-pruvost/js-password-generator/fork)
+2. Create your feature branch (`git checkout -b feature/my-feature`)
+3. Code your feature
+4. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+5. Push to the branch (`git push origin feature/my-feature`)
+6. [Open a pull request](https://github.com/bastien-pruvost/js-password-generator/compare)
+
+You can also simply open an issue with the tag "enhancement".
+
+Don't forget to give the project a star! Thanks again!
+
+
+## License
+
+Distributed under the [MIT License](https://choosealicense.com/licenses/mit).
+
+See `LICENSE` file for more information.
+
+
+
+<!-- prettier-ignore-end -->

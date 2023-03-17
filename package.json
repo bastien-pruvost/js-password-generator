@@ -1,21 +1,19 @@
 {
   "name": "js-password-generator",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "App to generate strong and random passwords",
+  "keywords": [],
+  "homepage": "https://github.com/bastien-pruvost/js-password-generator#readme",
+  "license": "MIT",
+  "author": {
+    "name": "Bastien Pruvost",
+    "url": "https://github.com/bastien-pruvost"
+  },
+  "main": "index.html",
+  "browserslist": "defaults",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prefix": "postcss ./pre-style.css --use autoprefixer -d ./prefixed"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dev-BastienPruvost/js-password-generator.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Dev-BastienPruvost/js-password-generator/issues"
-  },
-  "homepage": "https://github.com/Dev-BastienPruvost/js-password-generator#readme",
-  "browserslist": "defaults"
+  }
 }

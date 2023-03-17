@@ -1,62 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Password Generator</title>
+    <link rel="icon" type="image/png" href="./img/icon.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Password Generator</title>
-  <link rel="icon" type="image/png" href="./img/icon.png" />
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+  <body>
+    <div class="app">
+      <h1 title="Password Generator">Password Generator</h1>
 
-<body>
+      <div class="password">
+        <div class="range-container">
+          <span>Number of characters</span>
+          <input type="text" id="display-password-length" value="10" readonly />
+          <input type="range" id="password-length" min="4" max="40" value="10" />
+        </div>
 
-  <div class="app">
+        <div class="checkbox-container">
+          <input type="checkbox" id="lowercase" checked />
+          <label for="lowercase">a-z</label>
 
-    <h1 title="Password Generator">Password Generator</h1>
+          <input type="checkbox" id="uppercase" />
+          <label for="uppercase">A-Z</label>
 
-    <div class="password">
+          <input type="checkbox" id="numbers" />
+          <label for="numbers">0-9</label>
 
-      <div class="range-container">
-        <span>Number of characters</span>
-        <input type="text" id="display-password-length" value="10" readonly>
-        <input type="range" id="password-length" min="4" max="40" value="10">
+          <input type="checkbox" id="symbols" />
+          <label for="symbols">!-%</label>
+        </div>
+
+        <button class="generateButton">Generate</button>
+
+        <div class="password-output-container">
+          <input type="text" id="password-output" value="" maxlength="40" readonly />
+
+          <i class="far fa-copy" id="copy">
+            <span class="copyInfo"> Copy</span>
+            <span class="copied">Copied to clipboard</span>
+          </i>
+        </div>
       </div>
-
-      <div class="checkbox-container">
-        <input type="checkbox" id="lowercase" checked>
-        <label for="lowercase">a-z</label>
-
-        <input type="checkbox" id="uppercase">
-        <label for="uppercase">A-Z</label>
-
-        <input type="checkbox" id="numbers">
-        <label for="numbers">0-9</label>
-
-        <input type="checkbox" id="symbols">
-        <label for="symbols">!-%</label>
-      </div>
-
-      <button class="generateButton">Generate</button>
-
-      <div class="password-output-container">
-        <input type="text" id="password-output" value="" maxlength="40" readonly>
-
-        <i class="far fa-copy" id="copy">
-          <span class="copyInfo"> Copy</span>
-          <span class="copied">Copied to clipboard</span>
-        </i>
-
-      </div>
-
-
     </div>
 
-  </div>
-
-  <script src="./index.js"></script>
-</body>
-
+    <script src="./index.js"></script>
+  </body>
 </html>
